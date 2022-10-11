@@ -34,3 +34,11 @@ bear1 = Bear()
 fly_test(parrot1)
 fly_test(penguin1)
 fly_test(bear1)
+
+OUTPUT = """
+
+    Parrots can fly
+    Penguins can't fly
+    Bears don't have wings lol
+
+"""
