@@ -1,10 +1,13 @@
 from tkinter import Button
 class Cell:
+    all = []
     def __init__(self, x, y, is_mine = False):
         self.is_mine = is_mine
         self.cell_btn_object = None
         self.x = x
-        self.y = y
+        self.y = y 
+
+        Cell.all.append(self)
     
     def create_btn_object(self, location):
         btn = Button(
@@ -23,3 +26,7 @@ class Cell:
 
     def right_click_actions(self, event):
         print("right click")
+
+    @staticmethod
+    def random_mines():
+        pass
