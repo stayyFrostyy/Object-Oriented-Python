@@ -44,7 +44,7 @@ for x in range(settings.GRID_SIZE):
         )
 
 
-# https://www.youtube.com/watch?v=K-7Zkgpbi9Q&list=PLOkVupluCIjsyLs2lHL7M3ZubAxH10WHB&index=2
+# https://www.youtube.com/watch?v=_Aycjxb9Pkg&list=PLOkVupluCIjsyLs2lHL7M3ZubAxH10WHB&index=3
 
 
 
