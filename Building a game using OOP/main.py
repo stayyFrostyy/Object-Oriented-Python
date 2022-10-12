@@ -7,7 +7,7 @@ import utils
 root = Tk()
 # Window Settings
 root.configure(bg="black")
-root.geometry('1440x720')
+root.geometry(f"{settings.WIDTH}x{settings.HEIGHT}")
 root.title("Minesweeper Game")
 root.resizable(False, False)
 
@@ -18,6 +18,17 @@ top_frame = Frame(
     height=utils.height_prct(25)
 )
 top_frame.place(x=0, y=0)
+
+game_title = Label(
+    top_frame,
+    bg="black",
+    fg="white",
+    text="Minesweeper",
+    font=("", 48)
+)
+game_title.place(
+    x=utils.width_prct(25), y=0
+)
 
 left_frame = Frame(
     root, 
