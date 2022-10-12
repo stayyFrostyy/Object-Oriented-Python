@@ -43,10 +43,7 @@ for x in range(settings.GRID_SIZE):
             column = x, row = y
         )
 
-
-# https://www.youtube.com/watch?v=_Aycjxb9Pkg&list=PLOkVupluCIjsyLs2lHL7M3ZubAxH10WHB&index=3
-
-
+Cell.random_mines()
 
 # Runs window
 root.mainloop()
