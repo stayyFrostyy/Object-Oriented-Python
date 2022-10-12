@@ -52,6 +52,9 @@ class Cell:
 
             self.show_cell()
 
+        self.cell_btn_object.unbind("<Button-1>")
+        self.cell_btn_object.unbind("<Button-3>")
+
     def get_cell_by_axis(self, x, y):
         for cell in Cell.all:
             if cell.x == x and cell.y == y:
