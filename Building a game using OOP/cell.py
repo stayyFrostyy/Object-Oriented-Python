@@ -52,6 +52,10 @@ class Cell:
 
             self.show_cell()
 
+            if Cell.cell_count == settings.MINES_COUNT:
+                ctypes.windll.user32.MessageBoxW(0, 'You won', 'WINNER', 0)
+                sys.exit()
+
         self.cell_btn_object.unbind("<Button-1>")
         self.cell_btn_object.unbind("<Button-3>")
 
