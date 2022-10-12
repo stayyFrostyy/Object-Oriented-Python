@@ -17,7 +17,7 @@ class Cell:
             location,
             width=12,
             height=4,
-            text = f"{self.x}, {self.y}"
+            # text = f"{self.x}, {self.y}"
         )
 
         btn.bind('<Button-1>', self.left_click_actions)
@@ -25,7 +25,21 @@ class Cell:
         self.cell_btn_object = btn
 
     def left_click_actions(self, event):
-        print("left click")
+        if self.is_mine:
+            self.show_mine()
+        else:
+            self.show_cell()
+
+    def get_cell_by_axis(self, x, y):
+        for cell in Cell.all:
+            if cell.x == x and cell.y == y:
+                return cell
+        
+    def show_cell(self):
+        pass
+
+    def show_mine(self):
+        self.cell_btn_object.configure(bg='red')
 
     def right_click_actions(self, event):
         print("right click")
