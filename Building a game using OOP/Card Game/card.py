@@ -13,3 +13,10 @@ class Card:
     # Creates string reference to object
     def __str__(self):
         return f"{Card.ranks[self.rank]}{Card.suits[self.suit]}"
+
+    # Method to compare cards - __lt__ overrides the less than method
+    def __lt__(self, other):
+        if self.rank == other.rank:
+            return self.suit < other.suit
+        else:
+            return self.rank < other.rank
