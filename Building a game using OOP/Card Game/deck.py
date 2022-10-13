@@ -11,6 +11,8 @@ class Deck:
         for suit in range(4):
             for rank in range(13):
                 self.deck.append(Card(suit, rank))
+        
+        self.shuffle()
 
     # Creates method to check length of deck (list)
     def __len__(self):
