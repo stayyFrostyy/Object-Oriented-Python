@@ -1,9 +1,15 @@
-from card import Card
 from deck import Deck
 from hand import Hand
 
 deck = Deck()
+hands = []
+for i in range(1, 5):
+    hands.append(Hand(f"P{i}"))
 
-hand = Hand("Player")
-hand.add_card(deck.pop_card())
-print(hand)
+while len(deck) > 0:
+    for hand in hands:
+        hand.add_card(deck.pop_card())
+
+
+for hand in hands:
+    print(hand)
