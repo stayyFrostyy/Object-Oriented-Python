@@ -1,8 +1,16 @@
+# Imports Card class
+from card import Card
+import random
+
 # Defines Deck class
 class Deck:
     # Initiates deck object as an empty list
     def __init__(self):
         self.deck = []
+        # Adds 52 Card objects to the deck
+        for suit in range(4):
+            for rank in range(13):
+                self.deck.append(Card(suit, rank))
 
     # Creates method to check length of deck (list)
     def __len__(self):
@@ -14,4 +22,7 @@ class Deck:
 
     # Creates method to remove last card from deck
     def pop_card(self):
-        self.deck.pop()
+        return self.deck.pop()
+
+    def shuffle(self):
+        random.shuffle(self.deck)
