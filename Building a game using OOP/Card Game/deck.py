@@ -22,7 +22,7 @@ class Deck:
     def add_card(self, card):
         self.deck.append(card)
 
-    # Creates method to remove last card from deck
+    # Creates method to return the last card in Deck
     def pop_card(self):
         return self.deck.pop()
 
